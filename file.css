@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.alertt {
+  height: 30%;
+  width: 30%;
+  padding-top: 1rem;
+  background-color: white;
+  border: 2px solid gray;
+  visibility: hidden;
+  top: 0;
+  transform: translate(-50%, -50%) scale(0.1);
+  transition: transform 0.4s, top 0.4s;
+}
+.win {
+  visibility: visible;
+  top: 50%;
+  transform: translate(-50%, -50%) scale(1);
+}
+.img {
+  width: 10%;
+  height: 10%px;
+  margin-left: 45%;
+}
+h2 {
+  text-align: center;
+  margin-top: 2px;
+}
+.okk {
+  color: #090909;
+  padding: 0.5em 1em;
+  font-size: 15px;
+  border-radius: 0.5em;
+  background: #e8e8e8;
+  cursor: pointer;
+  border: 1px solid #e8e8e8;
+  margin-left: 44%;
+  transition: all 0.3s;
+  box-shadow: 6px 6px 12px #c5c5c5, -6px -6px 12px #ffffff;
+  margin-top: 30px;
+}
+
+.okk:active {
+  color: #666;
+  box-shadow: inset 4px 4px 12px #c5c5c5, inset -4px -4px 12px #ffffff;
+}
+
+/* From Uiverse.io by dylanharriscameron */
+.upload {
+  position: relative;
+  width: 500px;
+  height: 400px;
+  border-radius: 14px;
+  z-index: 1111;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 20px 20px 60px #bebebe, -20px -20px 60px #ffffff;
+}
+
+.bg {
+  position: absolute;
+  top: 5px;
+  left: 5px;
+  width: 490px;
+  height: 390px;
+  z-index: 2;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(24px);
+  border-radius: 10px;
+  overflow: hidden;
+  outline: 2px solid white;
+  background-color: rgba(255, 255, 255, 0.857);
+}
+
+.blob {
+  position: absolute;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background-color: #ff0000;
+  opacity: 1;
+  filter: blur(12px);
+  animation: blob-bounce 5s infinite ease;
+}
+
+@keyframes blob-bounce {
+  0% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
+  }
+
+  25% {
+    transform: translate(-100%, -100%) translate3d(100%, 0, 0);
+  }
+
+  50% {
+    transform: translate(-100%, -100%) translate3d(100%, 100%, 0);
+  }
+
+  75% {
+    transform: translate(-100%, -100%) translate3d(0, 100%, 0);
+  }
+
+  100% {
+    transform: translate(-100%, -100%) translate3d(0, 0, 0);
+  }
+}
+
+.container {
+  height: 100vh;
+  width: 100%;
+  /* background-color: green; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+h1 {
+  font-size: 3rem;
+  padding: 1rem;
+}
+p {
+  font-size: larger;
+  color: gray;
+  margin-left: 4%;
+}
+/* .past{
+    height: 10%;
+    width: 98%;
+    margin-left: 1%;
+
+} */
+/* From Uiverse.io by Yaseen549 */
+.past {
+  border: none;
+  border-radius: 15px;
+  padding: 15px;
+  background-color: #e8e8e8;
+  box-shadow: 6px 6px 12px #ffffff, -6px -6px 12px #c5c5c5;
+  font-size: larger;
+  font-weight: bold;
+  min-width: 98%;
+  margin-top: 5%;
+  margin-left: 1%;
+}
+
+.past:focus {
+  outline-color: white;
+  place-content: "Enter your message!";
+}
+/* From Uiverse.io by faxriddin20 */
+.button {
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset,
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px,
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px,
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+  border: none;
+  width: 98%;
+  height: 50px;
+  margin-top: 10%;
+  margin-left: 1%;
+  color: white;
+  font-size: 2rem;
+  background-color: transparent;
+  border-radius: 20px;
+  transition: all 0.3s ease;
+}
+.button:active {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+
+@media screen and (min-width: 360px) and (max-width: 640px) {
+  h1 {
+    font-size: 1.4rem;
+  }
+  p {
+    font-size: small;
+    margin-left: 6%;
+  }
+  .upload {
+    width: 300px;
+    height: 250px;
+  }
+  .bg {
+    width: 290px;
+    height: 240px;
+  }
+  .blob {
+    width: 180px;
+    height: 180px;
+  }
+  .past {
+    min-width: 75%;
+    margin-left: 7.5%;
+    margin-top: 2.5%;
+    font-size: small;
+  }
+  .button {
+    width: 75%;
+    margin-left: 7.5%;
+    margin-top: 5%;
+    font-size: small;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+  p {
+    font-size: medium;
+    margin-left: 6%;
+  }
+  .upload {
+    width: 300px;
+    height: 250px;
+  }
+  .bg {
+    width: 290px;
+    height: 240px;
+  }
+  .blob {
+    width: 180px;
+    height: 180px;
+  }
+  .past {
+    min-width: 80%;
+    margin-left: 7.5%;
+    margin-top: 2.5%;
+    font-size: medium;
+  }
+  .button {
+    width: 83%;
+    margin-left: 7.5%;
+    margin-top: 3%;
+    font-size: medium;
+  }
+}
+@media screen and (min-width: 720px) and (max-width: 1280px) {
+  h1 {
+    font-size: 2rem;
+  }
+  p {
+    font-size: large;
+  }
+  .upload {
+    width: 400px;
+    height: 300px;
+  }
+  .bg {
+    width: 390px;
+    height: 290px;
+  }
+  .blob {
+    width: 200px;
+    height: 200px;
+  }
+  .past {
+    min-width: 90%;
+    margin-left: 5%;
+  }
+  .button {
+    width: 90%;
+    margin-left: 5%;
+  }
+}
